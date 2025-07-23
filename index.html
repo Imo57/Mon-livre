@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les 20 « Petits Coups » – Johan</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4fdf6;
+      color: #0f5132;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    #cover, #main {
+      display: none;
+    }
+    #cover.active, #main.active {
+      display: block;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
+      text-align: center;
+    }
+    p.intro {
+      font-size: 1.2em;
+      text-align: center;
+      margin-bottom: 2em;
+    }
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 12px 25px;
+      font-size: 1em;
+      border: none;
+      background-color: #0f5132;
+      color: white;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background-color: #0a3a23;
+    }
+    ul#chapters {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul#chapters li {
+      background-color: #d3ecd6;
+      margin: 10px 0;
+      padding: 12px 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    ul#chapters li:hover {
+      background-color: #bde2c3;
+    }
+    #story {
+      background-color: #e9f7ec;
+      padding: 20px;
+      border-radius: 10px;
+      white-space: pre-wrap;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- PAGE DE GARDE -->
+   <div id="cover" class="active">
+  <h1>Bienvenue sur le site de Johan</h1>
+  <p class="intro">
+    Je suis Johan, passionné par l'immobilier, la finance, la stratégie, et la liberté financière.<br><br>
+    Ce site regroupe mon projet personnel : <strong>« Les 20 Petits Coups à la Mentalité Gagnante »</strong>.<br>
+    Il s’agit de 20 récits concrets, vécus ou inspirés du réel, pour développer un état d'esprit tourné vers l’action, le courage, la valeur.
+  </p>
+  
+  <div class="bio">
+    <h2>Qui suis-je ?</h2>
+    <p>
+      À 27 ans, je me suis construit un patrimoine immobilier, boursier et crypto-actif en partant de zéro.  
+      Je crois que chaque petit choix peut être un levier de richesse.  
+      Chaque chapitre de ce projet raconte un coup que j’ai joué, parfois risqué, mais toujours mûrement réfléchi. Certains sont de simples décisions stratégiques, d’autres    représentent des moments forts de ma vie, comme l’achat de mon premier appartement locatif — une étape clé dans ma quête d’indépendance financière. Chaque page est une étape, une leçon, un levier posé sur le chemin de ma liberté.
+    </p>
+  </div>
+
+  <div class="objectif">
+    <h2>Pourquoi ce projet ?</h2>
+    <p>
+      Parce que trop de gens vivent en pilote automatique.<br>
+      Je veux montrer qu'on peut faire différemment, avec méthode, audace et lucidité.<br><br>
+      Si tu lis ces lignes, c’est que tu as déjà l’envie de mieux faire.  
+      Bienvenue dans ma tête. Bienvenue dans le jeu.
+    </p>
+  </div>
+
+  <button id="start">📖 Découvrir les chapitres</button>
+</div>
+
+
+    
+    <!-- CONTENU PRINCIPAL -->
+    <div id="main">
+      <h1>Les Chapitres</h1>
+      <button id="back">Retour à la page de présentation</button>
+      <ul id="chapters">
+        <li data-id="1">Chapitre 1 – La serrure, le bitcoin et la valeur invisible</li>
+        <li data-id="2">Chapitre 2 – L’affaire du sèche-serviette à 450 euros</li>
+        <li data-id="3">Chapitre 3 – La cuisine à 650 €</li>
+	<li data-id="4">Chapitre 4 – Mes premiers pas en immobilier, un F2 à 98k€</li>
+
+        <!-- Tu peux ajouter d'autres chapitres ici -->
+      </ul>
+      <div id="story"><em>Clique sur un chapitre pour lire l’histoire.</em></div>
+    </div>
+
+  </div>
+
+  <script>
+    const cover = document.getElementById('cover');
+    const main = document.getElementById('main');
+    const startBtn = document.getElementById('start');
+    const backBtn = document.getElementById('back');
+    const chapters = document.querySelectorAll('#chapters li');
+    const storyDiv = document.getElementById('story');
+
+    // Histoires par chapitre
+    const stories = {
+      1: `Chapitre 1 – La serrure, le bitcoin et la valeur invisible
+
+Un samedi matin ordinaire. Le téléphone vibre.
+C’est ma locataire. Un ton légèrement embêté, presque gêné.
+— « Bonjour, j’ai un souci… j’ai perdu la clé du débarras. »
+Mon premier réflexe ? Déléguer.
+Je lui réponds naturellement :
+— « Appelez un serrurier, il saura gérer ça. »
+Mais à peine la conversation terminée, je sens le petit déclic.
+Vous savez, ce moment où votre cerveau d’investisseur s’allume comme une alarme silencieuse.
+Pourquoi faire appel à un pro à 200 € alors que je peux peut-être le faire moi-même ?
+Je la rappelle.
+— « Écoutez, si vous êtes d’accord, je peux venir m’en occuper. Je vous facturerai moins cher qu’un serrurier, et au moins vous savez à qui vous avez affaire. »
+Elle accepte. Elle est soulagée.
+Quelques heures plus tard, me voilà devant la serrure récalcitrante.
+Un peu de patience, quelques outils, de l’huile de coude.
+Je fais sauter l’ancien barillet, j’installe le nouveau.
+Coût total de l’opération :
+•	5,99 € la serrure
+•	12,90 € le barillet
+•	3 heures de mon temps
+Je lui facture l’intervention 95 €.
+Elle est ravie. Elle a économisé une belle somme, et en plus, elle sait maintenant que son propriétaire est réactif et compétent.
+Moi ? J’empoche un bénéfice de 76€.
+Mais au lieu de les dépenser bêtement, je fais un geste simple :
+je les convertis immédiatement en Bitcoin.
+Pas pour spéculer à court terme.
+Mais pour graver dans le marbre ce moment invisible où un simple service devient un actif.
+Dans vingt ans, ce n’est peut-être plus une serrure que j’aurai changée.
+C’est peut-être un mois de liberté que j’aurai gagné.
+Ou un billet pour souffler, loin, tranquille, parce qu’un jour, en 2025, j’ai pris une décision simple.
+La mentalité gagnante, ce n’est pas faire fortune en un coup.
+C’est voir l’opportunité là où les autres voient une corvée.
+C’est transformer les problèmes en capital.
+C’est vivre chaque jour comme un chapitre silencieux de son indépendance future.
+`,
+
+      2: `Chapitre 2 – L’affaire du sèche-serviette à 450 euros - Transformer un obstacle en levier
+
+Ce jour-là, j’étais en pleine gestion d’un de mes appartements à rénover, et comme souvent, chaque détail compte. Parmi les indispensables, un sèche-serviette d’une des meilleures marques sur le marché, un modèle robuste et reconnu, s’imposait pour garantir confort et valeur ajoutée au logement. Le prix affiché sur le site était de 450 euros, somme que je considérais raisonnable pour un produit neuf, garanti et fonctionnel.
+Sans hésiter, je passe commande en ligne. Tout semble réglé, et je note mentalement cette tâche accomplie sur ma liste. Puis, moins d’une demi-heure plus tard, mon téléphone vibre : un mail du vendeur.
+« Produit en rupture de stock. Remboursement intégral effectué. »
+La première réaction pourrait être la frustration, une perte de temps, un petit contretemps agaçant qui s’ajoute à une liste déjà longue de soucis. Pour beaucoup, ce serait un signal d’abandon, de passer à autre chose.
+Mais pour moi, c’est tout le contraire. Ce genre d’aléas est une opportunité déguisée, un moment pour réfléchir autrement.
+Je me suis posé. Comment transformer ce « non » en « oui » ? Comment faire mieux que le système, et surtout comment tirer profit de cette rupture de stock ?
+J’ai ouvert LeBoncoin, ce marché aux trésors souvent sous-estimé. En quelques minutes, je tombe sur une annonce. Un sèche-serviette similaire, quasiment neuf, à seulement 45 euros, à quinze minutes de chez moi. Soit un dixième du prix initial. Une opportunité en or.
+Je ne laisse pas passer. J’appelle immédiatement le vendeur. Il me confirme que l’objet est comme neuf, jamais utilisé. Une chance incroyable, mais je sais qu’il ne faut pas perdre une seconde. Je me prépare, je prends la voiture, et quinze minutes plus tard, je tiens le sèche-serviette entre mes mains.
+C’est là que la négociation entre en jeu. Ce que j’ai appris, c’est que dans toute transaction, le premier prix n’est que le point de départ. Avec quelques arguments bien placés, un ton calme et sûr, je décroche une réduction supplémentaire : 35 euros, et le deal est scellé.
+Maintenant, faisons le calcul simple, mais puissant :
+450 euros (le prix initial, remboursé par le site) – 35 euros (le prix payé) = 415 euros d’économie nette.
+Mais je ne me suis pas contenté de garder cet argent en réserve, sous mon matelas ou sur un compte courant à 0,5 % d’intérêt. Non, j’ai pris ces 415 euros et je les ai immédiatement investis sur mon PEA, dans un ETF S&P 500, ce fonds indiciel qui suit les plus grandes entreprises américaines, avec un historique solide de croissance sur le long terme.
+Ce geste, simple en apparence, est en réalité le cœur de la philosophie d’un investisseur malin. Ce n’est pas seulement la somme économisée, c’est la manière dont elle est utilisée qui fait toute la différence.
+Le sèche-serviette, dans vingt ans, ne vaudra plus rien.
+Mais les 415 euros investis, eux, pourraient bien valoir plusieurs milliers d’euros.
+Chaque petite économie, chaque coup d’œil à l’opportunité cachée, chaque décision prise avec lucidité et sang-froid, c’est un pas de plus vers l’indépendance financière.
+Ce chapitre illustre parfaitement ce que j’appelle « mentalité gagnante » : ne jamais subir les imprévus, mais les transformer en leviers. Chercher toujours la porte dérobée, la solution alternative, le moyen d’ajouter de la valeur là où personne ne regarde.
+Car au fond, ce n’est pas la taille de la somme initiale qui compte, mais la qualité du geste, la constance dans la stratégie, et la patience d’un investissement long terme.
+`,
+
+      3: `Chapitre 3 – La cuisine à 650 € — Quand une simple visite au magasin devient un levier de rentabilité
+
+Ce jour-là, je n’étais pas venu pour ça. Simplement pour acheter du carrelage. Une tâche rapide, mécanique, presque anodine. Un petit aller-retour entre deux couches de peinture sur un chantier poussiéreux.
+Mais parfois, le hasard frappe à la porte quand on s’y attend le moins.
+Face au rayon carrelage, à quelques mètres à peine, trônait une cuisine d’exposition. Pas une cuisine ordinaire : une cuisine complète, avec four, hotte, frigo, congélateur et plaque de cuisson. Compacte, moderne, et impeccable — à part trois boutons manquants sur la plaque de cuisson. Un détail, mais suffisant pour que la boutique brade l’ensemble.
+Le vendeur me repère, et sans que je demande quoi que ce soit, me lance :
+— « Si vous la prenez tout de suite, 650 € livraison incluse. »
+Je n’en croyais pas mes oreilles. Une cuisine complète, neuve, avec électroménager, pour 650 € ? C’était presque une blague.
+J’accepte l’offre. Ce soir-là, je commande en ligne un lot universel de dix boutons pour plaques de cuisson, 4,99 € frais de port inclus — un geste simple pour régler un détail.
+Quelques semaines plus tard, la cuisine est installée. L’appartement prêt à être loué. Loyer demandé ? 650 € par mois.
+Le lien est clair : la cuisine s’est remboursée en un mois de loyer.
+Mais la vraie magie se révèle sur la durée. En une année, l’appartement génère :
+650 € × 12 mois = 7 800 € de revenus locatifs.
+Pour un investissement total de 655 € (cuisine + boutons), cela représente un retour sur investissement supérieur à 11 fois le prix payé, en seulement 12 mois.
+Chaque mois suivant, ce sont des loyers nets qui tombent, sans frais supplémentaires liés à cette cuisine.
+Ce simple coup montre que la rentabilité ne vient pas toujours de grands coups spectaculaires. Parfois, elle se cache dans l’œil attentif qui sait reconnaître une opportunité, dans la rapidité d’action, et dans la volonté de transformer un simple achat en un actif qui génère du cash-flow.
+Ce que beaucoup auraient vu comme un coup de chance était en réalité le fruit d’une vigilance permanente. Savoir repérer, décider vite, et connecter chaque choix au long terme : voilà la trame qui traverse tout ce livre.
+Ce jour-là, je n’ai pas juste acheté une cuisine. J’ai posé une pierre de plus dans la construction de mon indépendance financière.`,
+
+     4: `Chapitre 4 – Mes premiers pas en immobilier, un F2 à 98k€
+
+À 22 ans, alors que beaucoup de mes amis cherchaient encore leur voie, moi, je signais l’achat de mon premier appartement. C’était un F2, acquis pour 98 000 euros. Pas grâce à un héritage ni à un coup de chance, mais simplement parce que j’avais une idée claire : commencer à construire ma liberté financière, un pas à la fois.
+
+Ce premier investissement n’était pas parfait, mais il représentait un levier essentiel. Avec une mensualité de crédit de 460 euros sur 20 ans, et environ 160 euros de charges diverses (taxe foncière, assurance, comptable, copropriété...), je me retrouvais avec un coût total proche de 620 euros par mois. En face, je percevais un loyer de 720 euros charges comprises, ce qui me laissait un cash-flow positif d’environ 100 euros chaque mois.
+
+Ce n’était pas énorme, mais c’était un début. J’avais pris soin d’équiper l’appartement avec du matériel de qualité — une machine à laver Bosch, une télévision Samsung de 120 cm — et je louais en LMNP au régime réel, ce qui me permettait de réduire l’imposition sur les revenus locatifs.
+
+Grâce à ce premier bien, j’ai appris beaucoup : gérer un crédit, optimiser la rentabilité, trouver un locataire fidèle, et surtout, comprendre que la richesse ne vient pas d’un coup, mais d’un plan construit patiemment. Ce F2, ce n’était pas qu’un simple logement, c’était le symbole de ma détermination à sortir du salariat classique et à créer un actif qui travaille pour moi.
+
+Cette étape a posé la première pierre d’un chemin long et exigeant, mais surtout passionnant. À 22 ans, j’ai pris une décision simple mais lourde de conséquences : ne pas attendre que la vie me donne ce que je voulais, mais aller le chercher. Ce premier appartement a été mon premier levier vers la liberté.`
+
+
+
+    };
+
+    // Bouton démarrer
+    startBtn.addEventListener('click', () => {
+      cover.classList.remove('active');
+      main.classList.add('active');
+    });
+
+    // Bouton retour
+    backBtn.addEventListener('click', () => {
+      main.classList.remove('active');
+      cover.classList.add('active');
+    });
+
+    // Clic sur les chapitres
+    chapters.forEach(chap => {
+      chap.addEventListener('click', () => {
+        const id = chap.getAttribute('data-id');
+        storyDiv.textContent = stories[id] || "Chapitre non encore disponible.";
+      });
+    });
+  </script>
+
+</body>
+</html>
